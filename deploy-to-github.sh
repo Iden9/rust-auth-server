@@ -1,0 +1,65 @@
+#!/bin/bash
+
+echo "🚀 Rust Authentication Server - GitHub 部署指南"
+echo "================================================"
+echo ""
+
+echo "📋 请按照以下步骤手动创建 GitHub 仓库并上传代码："
+echo ""
+
+echo "1️⃣ 创建 GitHub 仓库"
+echo "   - 访问 https://github.com/new"
+echo "   - 仓库名称: rust-auth-server"
+echo "   - 描述: A secure Rust authentication server with JWT and SQLite"
+echo "   - 设置为 Public 或 Private（根据需要）"
+echo "   - 不要初始化 README、.gitignore 或 license（我们已经有了）"
+echo "   - 点击 'Create repository'"
+echo ""
+
+echo "2️⃣ 添加远程仓库并推送代码"
+echo "   在当前目录执行以下命令（替换 YOUR_USERNAME 为你的 GitHub 用户名）："
+echo ""
+echo "   git remote add origin https://github.com/YOUR_USERNAME/rust-auth-server.git"
+echo "   git branch -M main"
+echo "   git push -u origin main"
+echo ""
+
+echo "3️⃣ 创建第一个版本标签"
+echo "   git tag -a v1.0.0 -m 'Initial release: Rust authentication server'"
+echo "   git push origin v1.0.0"
+echo ""
+
+echo "4️⃣ 验证 GitHub Actions"
+echo "   - 访问你的仓库页面"
+echo "   - 点击 'Actions' 标签"
+echo "   - 确认 CI/CD 工作流正在运行"
+echo "   - 标签推送应该触发完整的构建和发布流程"
+echo ""
+
+echo "5️⃣ 检查自动发布"
+echo "   - 在仓库页面点击 'Releases'"
+echo "   - 应该看到 v1.0.0 版本的自动发布"
+echo "   - 包含编译好的二进制文件和发布说明"
+echo ""
+
+echo "✅ 完成后，你的 Rust 认证服务器将："
+echo "   - 在 GitHub 上托管源代码"
+echo "   - 自动运行 CI/CD 流水线"
+echo "   - 在每次标签推送时创建发布版本"
+echo "   - 构建并发布 Docker 镜像到 GitHub Container Registry"
+echo ""
+
+echo "🔧 本地开发命令："
+echo "   cargo run                    # 启动开发服务器"
+echo "   cargo test                   # 运行测试"
+echo "   cargo build --release       # 构建生产版本"
+echo "   docker build -t rust-auth . # 构建 Docker 镜像"
+echo ""
+
+echo "📚 API 端点："
+echo "   GET  /api/health            # 健康检查"
+echo "   POST /api/register          # 用户注册"
+echo "   POST /api/login             # 用户登录"
+echo ""
+
+echo "🎉 部署完成！享受你的 Rust 认证服务器吧！"
